@@ -2,27 +2,31 @@
 <nav class="nav">
 
   <% if user_signed_in? %>
+
+    <a class="btn btn-danger" href="#" role="button"> New Products </a>
+    <a class="btn btn-danger" href="#" role="button"> Brands </a>
+    <a class="btn btn-danger" href="#" role="button"> Contact </a>
+
     <li>
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-    </li>
+      <%= link_to('Logout', destroy_user_session_path, method: :get) %>
+        </li>
+
     <li>
-    <%= link_to('Edit registration', edit_user_registration_path) %>
-    </li>
-    <a class="nav-link" href="#"> New Products</a>
-    <a class="nav-link" href="#"> Brands</a>
-    <a class="nav-link" href="#"> Contact</a>
+      <%= link_to('Edit registration', edit_user_registration_path) %>
+        </li>
+
   <% end %>
 
   <% if !user_signed_in? && request.path != "/users/sign_in" %>
     <li>
-    <%= link_to('Login', new_user_session_path)  %>
-    </li>
+      <%= link_to('Login', new_user_session_path)  %>
+        </li>
   <% end %>
 
   <% if !user_signed_in? && request.path != "/users/sign_up" %>
     <li>
-    <%= link_to('Register', new_user_registration_path)  %>
-    </li>
+      <%= link_to('Register', new_user_registration_path)  %>
+      </li>
   <% end %>
 
 </nav>
