@@ -1,29 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-<h1>Posts</h1>
+  <h1>Posts</h1>
+  <div class="row">
+    <div class="container-1 col-sm-12">
+      <% @posts.each_with_index do |post, index| %>
 
+        <div class="box-<%= index %>">
+          <img src="<%= post.image_url %>" class="posts-images">
+          <p><%= post.description %></p>
+          <p>
+            <%= link_to 'Show', post %> |
+            <%= link_to 'Edit', edit_post_path(post) %> |
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </p>
+        </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image data</th>
-      <th colspan="2">Image Description</th>
-    </tr>
-  </thead>
+      <% end %>
+    </div>
+  </div>
 
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><img src="<%= post.image_url %>"></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 </div>
 
 <br>
