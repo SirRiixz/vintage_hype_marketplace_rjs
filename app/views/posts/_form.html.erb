@@ -13,12 +13,12 @@
   <% end %>
 
   <div class="field">
-    <% if post.image.present? %>
+    <% if post.picture.present? %>
       <%= image_tag post.image_url %>
     <% end %>
 
     <%= form.label :image %>
-    <%= form.hidden_field :image, value: form.object.cached_image_data %>
+
     <%= form.file_field :image %>
 
   </div>

@@ -1,19 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 1
-  user_id: 
+  user: one
   picture: MyText
-  product_id: 
   description: MyText
   price: 1
   color: MyText
 
 two:
-  id: 1
-  user_id: 
+  user: two
   picture: MyText
-  product_id: 
   description: MyText
   price: 1
   color: MyText
