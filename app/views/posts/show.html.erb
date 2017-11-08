@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
+<div class="container-show">
 <p>
   <strong>Image data:</strong>
   <% if @post.image.present? %>
     <%= image_tag @post.image_url %>
+    <%= @post.description %>
   <% end %>
 
 </p>

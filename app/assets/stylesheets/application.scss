@@ -1,6 +1,18 @@
+.body {
+  margin: 50px;
+  border: 2px solid red;
+
+}
+
+
+.logo {
+  background-color: black;
+
+}
+
 .btn {
 
-  background-color: #8D8D8D;
+  background-color: #1e008c;
   color: #FFF;
   border: 1vw;
   margin: 1vw;
@@ -8,20 +20,18 @@
 
 .container-logo {
   background-position: center;
-  background-color: black;
-  background-attachment: fixed;
-  height: auto;
+  background-color: #FFF;
+  width: auto;
 }
 
-// .container {
-//   width: 100vw;
-//   margin: 0 auto;
-// }
+.container-show {
+   width: 100vw;
+   margin: 0 auto;
+}
 
 .container-1 {
   display:flex;
   flex-wrap:wrap;
-  justify-content:space-between;
   align-items:center;
   /*
   align-items:flex-start;
@@ -51,6 +61,16 @@
   width: 200px;
 }
 
+p {
+  text-align: center;
+}
+
+.card {
+  width: 22rem;
+  outline-style: double;
+  outline-color: #48C9B0;
+
+}
 // media query / aka breakpoint
 @media(min-width: 768px){
 
