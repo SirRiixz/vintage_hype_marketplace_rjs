@@ -8,6 +8,7 @@ body {
 
 .container-fluid {
   text-align: center;
+  align-items: center;
   background-color: #F0F3F4;
 }
 
@@ -17,11 +18,15 @@ body {
 }
 
 .btn {
+  background-color: #A3E4D7;
+  color: #000;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
 
-  background-color: #1e008c;
-  color: #FFF;
-  border: 1vw;
-  margin: 1vw;
+a:hover {
+  background-color: white;
 }
 
 .container-logo {
@@ -30,15 +35,13 @@ body {
   width: auto;
 }
 
-.container-show {
-   width: 100vw;
-   margin: 0 auto;
-}
+
 
 .container-1 {
   display:flex;
   flex-wrap:wrap;
   align-items:center;
+  text-align: center;
   /*
   align-items:flex-start;
   align-items:flex-end;
@@ -72,9 +75,12 @@ p {
 }
 
 .card {
-  width: 22rem;
-  outline-style: double;
-  outline-color: #48C9B0;
+  width: 23rem;
+  border: 3px solid #A3E4D7;
+  margin: auto;
+  margin-bottom: 20px;
+
+
 
 }
 // media query / aka breakpoint
