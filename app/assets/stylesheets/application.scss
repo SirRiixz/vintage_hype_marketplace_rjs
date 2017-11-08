@@ -1,9 +1,15 @@
-.body {
-  margin: 50px;
-  border: 2px solid red;
+body {
+  margin: 35px;
+  border: solid;
+  border-color: black;
 
 }
 
+
+.container-fluid {
+  text-align: center;
+  background-color: #F0F3F4;
+}
 
 .logo {
   background-color: black;
@@ -20,7 +26,7 @@
 
 .container-logo {
   background-position: center;
-  background-color: #FFF;
+  background-color: black;
   width: auto;
 }
 
