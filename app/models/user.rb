@@ -6,5 +6,11 @@ devise :database_authenticatable, :registerable,
 
     has_many :posts
 
-
+    has_one :profile, dependent: :destroy
+    after_create :init_profile
+  
+    def init_profile
+      self.create_profile!
+    end
+    
 end
