@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <h1>Posts</h1>
     <div class="btn">
-    <%= link_to 'New Post', new_post_path %>
+    <%= link_to 'New Post', new_profile_post_path(@current_user_profile.id) %>
     </div>
 
   <div class="row">

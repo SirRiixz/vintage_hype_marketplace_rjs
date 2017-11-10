@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    @current_user_profile = current_user.profile # Profile.where(user_id: current_user.id)
   end
 
   # GET /posts/1
@@ -15,6 +16,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = current_user.posts.build
+    @current_user_profile = current_user.profile
   end
 
   # GET /posts/1/edit
@@ -69,6 +71,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:photo, :image, :description)
+      params.require(:posts).permit(:picture, :price, :description)
     end
 end

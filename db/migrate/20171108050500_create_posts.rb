@@ -8,6 +8,8 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.text :color
 
       t.timestamps
+      t.integer "profile_id"
+      t.index ["profile_id"], name: "index_profiles_on_post_id"
     end
   end
 end
